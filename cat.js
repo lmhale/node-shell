@@ -1,9 +1,9 @@
 const fs = require("fs");
-const bash = require('./bash');
 
-module.exports = function(bash) {
-  fs.readFile(`./${bash}`, (err, data) => {
-    
+
+module.exports = function(theData) {
+  let file = theData.split(' ')[1]
+  fs.readFile(`./${file}.js`, (err, data) => {
     
     if (err) {
       throw err;
